@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="src/styles-p2.css">
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css"
+    />
+</head>
+<body>
+    <div class="overlay-mdiv">
+        <div class="post-div">
+            <ul class="ul-post">
+                <h2 class="h2-name"></h2>
+                <button class="btn-back"><i class="fa-solid fa-arrow-left back-icon"></i></button>
+            </ul>
+            <div class="line-post"></div>
+            <p class="p-content"></p>
+            <p class="p-author"></p>
+            <p class="p-date"></p>
+        </div>
+        <div class="com-div">
+            <h2 class="h2-comments">Коментарі</h3>
+             <div class="line-post"></div>
+             <ul class="ul-com">
+             <input type="text" class="input-author-com" placeholder="Напишіть своє ім'я...">
+             <input type="text" class="input-com" placeholder="Написати свій коментар...">
+             <button class="btn-send"><i class="fa-solid fa-paper-plane-top send-icon"></i></button>
+             </ul>
+             <div class="line-post"></div>
+            <div class="comments-post-div">
+            </div>
+        </div>
+    </div>
+    <script type="module" src="src/loadcom.js"></script>
+    <script type="module" src="src/openpost.js"></script>
+</body>
+</html>

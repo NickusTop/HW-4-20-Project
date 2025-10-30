@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini-Project</title>
+    <link rel="stylesheet" href="src/styles-p.css">
+  </head>
+  <body>
+    <div class="overlay-mdiv">
+      <div class="main-div">
+       <h2 class="main-h2">Пости</h2>
+      <div class="posts-div"></div>
+      </div>
+      <div class="postoverlay-div">
+      <div class="addpost-div">
+        <h2 class="add-h2">Додати Пост</h2>
+        <form class="add-post-form">
+          <input
+            type="text"
+            id="add-name-inp"
+            class="input-addpost"
+            placeholder="Назва посту"
+            required
+          />
+          <textarea
+            id="add-info-inp"
+            class="textarea-addpost"
+            placeholder="Інформація"
+            rows="5"
+            cols="50"
+            maxlength="500"
+            required
+          ></textarea>
+          <input
+            type="text"
+            id="add-author-input"
+            class="input-addpost"
+            placeholder="Автор"
+            required
+          />
+          <button class="button-addpost" type="submit">Створити</button>
+        </form>
+      </div>
+      <div class="delpost-div">
+        <h2 class="del-h2">Видалити Пост</h2>
+        <form class="del-post-form">
+          <input
+            type="text"
+            id="del-id-inp"
+            class="input-delpost"
+            placeholder="Id посту"
+            required
+          />
+          <button class="button-delpost" type="submit">Видалити</button>
+        </form>
+      </div>
+      <div class="editpost-div">
+        <h2 class="edit-h2">Редагувати Пост</h2>
+        <form class="edit-post-form">
+          <input
+            type="text"
+            id="edit-id-inp"
+            class="input-editpost"
+            placeholder="Id посту"
+          />
+          <input
+            type="text"
+            id="edit-name-inp"
+            class="input-editpost"
+            placeholder="Назва посту"
+          />
+          <textarea
+            id="edit-info-inp"
+            class="textarea-editpost"
+            placeholder="Інформація"
+            rows="5"
+            cols="50"
+            maxlength="500"
+          ></textarea>
+          <input
+            type="text"
+            id="edit-author-inp"
+            class="input-editpost"
+            placeholder="Автор"
+          />
+          <button class="button-editpost" type="submit">Оновити</button>
+        </form>
+      </div>
+
+    </div>
+    </div>
+
+    <button class="addpost-btn">
+      <i class="fa-solid fa-plus add-icon"></i>
+    </button>
+    <button class="deletepost-btn">
+      <i class="fa-solid fa-trash delete-icon"></i>
+    </button>
+    <button class="editpost-btn">
+      <i class="fa-solid fa-pen-to-square edit-icon"></i>
+    </button>
+    <button class="backpost-btn">
+      <i class="fa-solid fa-arrow-left back-icon"></i>
+    </button>
+
+    <script type="module" src="src/post.js"></script>
+    <script type="module" src="src/renderposts.js"></script>
+    <script type="module" src="src/other.js"></script>
+    <script type="module" src="src/openposts.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9a0165008b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
