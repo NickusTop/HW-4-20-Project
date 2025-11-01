@@ -3,7 +3,7 @@ import { addNewPost } from './js/addpost.js';
 import { deletePost } from './js/deletepost.js';
 import { updatePost } from './js/updatepost.js';
 
-
+const postoverlayDiv = document.querySelector('.postoverlay-div');
 const addBtn = document.querySelector('.button-addpost');
 const addNameInp = document.getElementById('add-name-inp');
 const addInfoInp = document.getElementById('add-info-inp');
@@ -18,7 +18,15 @@ const editAuthorInp = document.getElementById('edit-author-inp');
 
 findPosts();
 
-addBtn.addEventListener('click', () => addNewPost(addNameInp, addInfoInp, addAuthorInp));
-deleteBtn.addEventListener('click', () => deletePost(deleteIdInp));
-editBtn.addEventListener('click', () => updatePost(editIdInp, editNameInp, editInfoInp, editAuthorInp));
+postoverlayDiv.addEventListener('click', (e) => {
+  if (e.target.closest('.button-addpost')) {
+    addNewPost(addNameInp, addInfoInp, addAuthorInp);  
+  }
+  if (e.target.closest('.button-delpost')) {
+    deletePost(deleteIdInp);
+  }
+  if (e.target.closest('.button-editpost')) {
+    updatePost(editIdInp, editNameInp, editInfoInp, editAuthorInp);
+  }
+});
 

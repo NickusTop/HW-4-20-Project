@@ -12,7 +12,7 @@ export async function renderPosts(divPosts) {
         }
 
         return `
-          <div class="post" id="post-${post.id}">
+          <div class="post" data-id="${post.id}">
             <h2 class="h2-post">${post.title}</h2>
             <div class="line"></div>
             <p class="pc-post">${smallContent}</p>

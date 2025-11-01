@@ -1,6 +1,9 @@
 const baseUrl = "http://localhost:3000/";
 
 export async function addNewPost(nameInput, infoInput, authorInput) {
+  if (!nameInput.value || !infoInput.value || !authorInput.value) {
+    return;
+  }
   const newPost = {
     title: nameInput.value,
     content: infoInput.value,

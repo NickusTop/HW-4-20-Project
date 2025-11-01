@@ -5,8 +5,8 @@ const baseUrl = "http://localhost:3000/";
 document.addEventListener("click", (e) => {
   const post = e.target.closest(".post");
   if (post) {
-    const postIdDiv = post.id;
-    postId = postIdDiv.replaceAll("post-", "");
+    const postIdDiv = post.getAttribute("data-id");
+    postId = postIdDiv;
     console.log(postId);
     fetch(`${baseUrl}posts/${postId}`)
       .then((response) => response.json())
